@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Virus cases on map</title>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            z-index: 0;
+        }
+       
+
+        .btnr{
+            background-color:green;
+            color: #fff;
+            position: absolute;
+            z-index: 1;
+            width: 120px;
+            height: 50px;
+            font-weight: bold;
+            bottom: 30%;
+            
+        }
+        .btni{
+            background-color: rgb(243, 71, 71);
+            color: #fff;
+            position: absolute;
+            z-index: 1;
+            width: 120px;
+            height: 50px;
+            font-weight: bold;
+            bottom: 38%;
+            
+        }
+    </style>
+  
+</head>
+
+<body>
+    
+    <div id='map'><button class="btnr">Recovered Cases</button>
+        <button class="btni">Infected Cases</button>
+    </div>
+
+</body>
+<script src="index.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiaGFja3lyb2NrIiwiYSI6ImNrcHlrcWVhYjBsdzQyb253NXBsMTEyOWEifQ.9LeJYVJ5lrXiABEzadnXMQ';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/dark-v10',
+zoom: 1,
+center: [0,40]
+});
+</script>
+
+
+
+</html>

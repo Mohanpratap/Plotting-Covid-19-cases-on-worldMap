@@ -4,7 +4,7 @@ inf.addEventListener('click', updateMapi);
 rec.addEventListener('click', updateMapr);
 function updateMapi() {
 
-    fetch("/data.json").then(response => response.json()).then(rsp => {
+    fetch("data.json").then(response => response.json()).then(rsp => {
         console.log(rsp.data);
         rsp.data.forEach(element => {
             latitude = element.latitude;
@@ -28,7 +28,7 @@ function updateMapi() {
 
 function updateMapr() {
 
-    fetch("/data.json").then(response => response.json()).then(rsp => {
+    fetch("data.json").then(response => response.json()).then(rsp => {
         console.log(rsp.data);
         rsp.data.forEach(element => {
             latitude = element.latitude;
